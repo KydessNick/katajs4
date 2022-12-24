@@ -1,0 +1,282 @@
+*,
+*::before,
+*::after 
+{
+	padding: 0;
+	margin: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+a {
+	text-decoration: none;
+    color:#3698FB;
+}
+ul,
+ol,
+li {
+	list-style: none;
+}
+img{
+	vertical-align: top;
+}
+input,
+button,
+select,
+textarea {
+	margin: 0;
+	font-family: inherit;
+	font-size: inherit;
+	
+}
+html,
+body {
+    height: 100%;
+    width: 100%;
+    line-height: 1;
+    font-size: 16px;
+    background-color:#EFF6FF;
+    color: #2A4A5C;
+	font-family: "TTLakes","Arial", sans-serif;
+	overflow: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+
+}
+
+/*=====================*/
+/* ul{
+	background-color:aqua;
+	width: 100px;
+	height: 100px;
+}
+ul li{
+	background-color: blue;
+	width: 20px;
+	height: 20px;
+	margin: 5px;
+} */
+
+.container{
+	display: flex;
+	flex-direction: column;
+	flex: 1 1 100%;
+	align-items: center;
+	/* justify-content: center; */
+}
+
+.todolist-container{
+	max-width: 50vw;
+	min-width: 50vw;
+	margin-top: 2rem;
+	display: flex;
+	flex-direction: column;
+	justify-items: center;
+	justify-content: center;
+	align-content: center;
+}
+.todo-list{
+	background-color: white;
+	
+}
+
+#new-gist{
+	position: relative;
+	padding: 10px;
+}
+
+.autocomplete{
+	display: flex;
+	flex: 1 1 100%;
+}
+
+#new-gist input{
+	width: 75%;
+	height: 50px;
+	padding: 15px;
+	background-color: #1a2a87e5;
+	color: #15E379;
+	position: relative;
+	border: 2px solid #3698FB;
+	font-size: 15px;
+}
+#new-gist input::placeholder{
+	color: azure;
+}
+#new-gist input:focus{
+	outline: none;
+	border-color: #0d75ecda;
+}
+#new-gist button{
+	position: relative;
+	float: right;
+	font-weight: 500;
+	background-color: #0d75ecda;
+	border: none;
+	color:#EFF6FF;
+	cursor: pointer;
+	outline: none;
+	width: 20%;
+	height: 50px;
+	border-radius: 10px;
+}
+
+#gist-list{
+    border-radius: 10px;
+    width: 100%;
+    position: relative;
+    background-color: #ffffff;
+    padding: 30px 20px;
+    margin-top: 10px;
+}
+
+.gist{
+    border-radius: 5px;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #939697;
+    cursor: pointer;
+    background-color: #c5e1e6;
+    height: 50px;
+    margin-bottom: 8px;
+    padding: 5px 10px;
+    display: flex;
+	/* flex-direction: column; */
+}
+.gist span{
+    font-family: 'Poppins',sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+}
+.gist button{
+    background-color: #0a2ea4;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    height: 100%;
+    width: 40px;
+    border-radius: 5px;
+}
+
+
+/* =========== suggestio section ===========*/
+.wrapper-search{
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	width: 75%;
+	margin: 2rem 0
+}
+.search-input{
+	padding: 0.5rem
+}
+#gis-list{
+	position: absolute;
+	width: 100%;
+	height: auto;
+	top: 35px;
+	left: 0px;
+	border: 1px solid #2A4A5C;
+	background-color: #bdd9e95e;
+	border-radius: 5px
+}
+.suggestions {
+}
+
+.suggestion__content-list {
+	display: none;
+	flex-direction: column;
+	justify-content: space-between;
+	
+}
+.suggestion__content-item {
+	padding: 5px;
+	height: 50px;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+	border-bottom: 1px solid #4b62e539;
+}
+.suggestion__content-item:hover {
+	background-color: #bdd9e95e;
+
+}
+
+/*========== app ==============  */
+.search-container{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.search-container{
+	display: flex;
+	width: 100%;
+	height: auto;
+	position: relative;
+}
+.search-input{
+	width: 100%;
+	border-radius: 5px;
+	
+}
+.suggest-container{
+	width: 100%;
+	display: flex;
+	margin: 1rem 0 1rem 0;
+	position: absolute;
+	top:25px;
+	left:0;
+}
+.suggest-container__list{
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+	align-items: flex-start;
+}
+.suggest-container__item{
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 1rem 0 0 0;
+	background-color: #e1eceeb4;
+	border-bottom: 1px solid #1a2a87e5;
+	cursor: pointer;
+}
+.suggest-container__item--disable{
+	display: none;
+}
+.suggest-container__item:hover{
+	background-color: #c5e1e6;
+}
+
+/* Added repositories sector*/
+.added-repo{
+	
+}
+.added-repo__list{
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+	align-items: flex-start;
+}
+.added-repo__item{
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	padding: 1rem 0 0 0;
+	background-color: #e1eceeb4;
+	border-bottom: 1px solid #1a2a87e5;
+}
+.added-repo__item p{
+	margin: 0.5rem 0 0 0;
+}
+
+/* BUTTON DELETE */
+.delete-btn{
+	width: 40px;
+	height: 40px;
+	justify-self: flex-end;
+	align-self: center;
+}
